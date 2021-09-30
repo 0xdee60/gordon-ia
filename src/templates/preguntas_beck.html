@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block content %}
+
+    <div class="container">
+        
+    
+    <h1 class="display-3">Test de inventario de Beck</h1>
+
+<br/>
+    {% for pregunta in preguntas_beck %}
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-1-12">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">{{pregunta|title}}</h3>
+                <p class="card-text">{{pregunta.descripcion}}</p>
+                <hr/>
+                <a class="btn btn-warning" href="#" role="button">Responder</a>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+    </div>
+        
+    
+    {% endfor %}
+</div>
+{% endblock content %}
+
+
+
